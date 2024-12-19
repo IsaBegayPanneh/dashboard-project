@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard and Forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li>
+                    <a href="#home" data-section="home">
+                        <img src="/icons/ant-design--home-filled.svg" alt="Home Icon">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#profile" data-section="profile">
+                        <img src="/icons/ix--user-profile-filled.svg" alt="Profile Icon">
+                        Profile
+                    </a>
+                </li>
+                <li>
+                    <a href="#messages" data-section="messages">
+                        <img src="/icons/flowbite--messages-solid.svg" alt="Messages Icon">
+                        Messages
+                    </a>
+                </li>
+                <li>
+                    <a href="#settings" data-section="settings">
+                        <img src="/icons/ic--baseline-settings.svg" alt="Settings Icon">
+                        Settings
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <header>
+                <div class="logo-title">
+                    <img src="logo.1.png" alt="B Crown Logo" class="dashboard-logo">
+                    <h1>Welcome, Aisha</h1>
+                </div>
+                <div class="header-actions">
+                    <button id="newBtn">New</button>
+                    <button id="uploadBtn">Upload</button>
+                    <button id="shareBtn">Share</button>
+                </div>
+            </header>
+            <div class="dashboard">
+                <div class="projects">
+                    <h2>Projects</h2>
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <h3>Tribute page</h3>
+                            <p>This is a Tribute page about the great Chiekh Anta Diop</p>
+                        </div>
+                        <div class="project-card">
+                            <h3>Explore the gambia</h3>
+                            <p>This is a page that explains the nature of The Gambia in a simple way.</p>
+                        </div>
+                        <div class="project-card">
+                            <h3>Portfolio</h3>
+                            <p>This project contains my personal portfolio and all necessary details about me</p>
+                        </div>
+                        <div class="project-card">
+                            <h3>Business Landing page</h3>
+                            <p>This project contains my business details and few of the items i sell</p>
+                        </div>
+                        <div class="project-card">
+                            <h3>Admin dashboard and form</h3>
+                            <p>This is my ongoing project that deals with an admin form and dashboord</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="side-content">
+                    <div class="notification">
+                        <h2>Notifications</h2>
+                        <ul>
+                            <li>
+                                <h4>School admission</h4>
+                                <p>We are please to announce to you that the admission for class 2025 is open</p>
+                            </li>
+                            <li>
+                                <h4>School admission</h4>
+                                <p>We are please to announce to you that the admission for class 2025 is open</p>
+                            </li>
+                            <li>
+                                <h4>Public holiday announcement</h4>
+                                <p>This is a notice that 7th January 2025 is a public holiday</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="trending">
+                        <h2>Trending</h2>
+                        <ul>
+                            <li>
+                                <h4>FoUTG 2024</h4>
+                                <p>Have you heard of the trending gist concerning the Face of UTG..Visit the utg page of more</p>
+                            </li>
+                            <li>
+                                <h4>ITCA's first sports fans club</h4>
+                                <p>ITCA has established it's first ever football fans club which is an exciting steps for all ITCAns</p>
+                            </li>
+                            <li>
+                                <h4>2 lecturers dismissed</h4>
+                                <p>Rumours has it that 2 lecturers have been dismissed by the admin. True or False? </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="forms">
+                <h2>User Information Form</h2>
+                <form id="userForm">
+                    <div class="form-page" id="page1">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                            <div class="error" id="nameError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="error" id="emailError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country:</label>
+                            <select id="country" name="country" required>
+                                <option value="">Select a country</option>
+                                <option value="gambia">Gambia</option>
+                                <option value="senegal">Senegal</option>
+                                <option value="nigeria">Nigeria</option>
+                                <option value="niger">Niger</option>
+                                <option value="ghana">Ghana</option>
+                            </select>
+                            <div class="error" id="countryError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label>Gender:</label>
+                            <div class="radio-group">
+                                <input type="radio" id="male" name="gender" value="male" required>
+                                <label for="male">Male</label>
+                                <input type="radio" id="female" name="gender" value="female" required>
+                                <label for="female">Female</label>
+                            </div>
+                            <div class="error" id="genderError"></div>
+                        </div>
+                        <button type="button" id="nextBtn">Next</button>
+                    </div>
+                    <div class="form-page" id="page2" style="display: none;">
+                        <div class="form-group">
+                            <label>Do you have any medical conditions?</label>
+                            <div class="radio-group">
+                                <input type="radio" id="medicalConditionYes" name="medicalCondition" value="yes" required>
+                                <label for="medicalConditionYes">Yes</label>
+                                <input type="radio" id="medicalConditionNo" name="medicalCondition" value="no" required>
+                                <label for="medicalConditionNo">No</label>
+                            </div>
+                            <div class="error" id="medicalConditionError"></div>
+                        </div>
+                        <div id="medicalConditionDetailsGroup" class="form-group" style="display: none;">
+                            <label for="medicalConditionDetails">Please specify your medical condition(s):</label>
+                            <textarea id="medicalConditionDetails" name="medicalConditionDetails"></textarea>
+                            <div class="error" id="medicalConditionDetailsError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label>Do you have any disabilities?</label>
+                            <div class="radio-group">
+                                <input type="radio" id="disabilityYes" name="disability" value="yes" required>
+                                <label for="disabilityYes">Yes</label>
+                                <input type="radio" id="disabilityNo" name="disability" value="no" required>
+                                <label for="disabilityNo">No</label>
+                            </div>
+                            <div class="error" id="disabilityError"></div>
+                        </div>
+                        <div id="disabilityDetailsGroup" class="form-group" style="display: none;">
+                            <label for="disabilityDetails">Please specify your disability(ies):</label>
+                            <textarea id="disabilityDetails" name="disabilityDetails"></textarea>
+                            <div class="error" id="disabilityDetailsError"></div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" id="prevBtn">Previous</button>
+                            <button type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+                <div id="formResult" class="form-result"></div>
+            </div>
+        </main>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>
+
+
+
